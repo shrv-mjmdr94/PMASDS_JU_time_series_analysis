@@ -1,0 +1,10 @@
+data("AirPassengers")
+print(AirPassengers)
+
+plot.ts(AirPassengers)
+decompose= decompose(AirPassengers)
+plot(decompose)
+print(decompose)
+library(forecast)
+deseasonal = seasadj(decompose)
+plot(deseasonal)
